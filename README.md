@@ -11,8 +11,8 @@ Repo gồm các thành phần sau:
 |---|---|
 | **Sinh viên** | Trần Lưu Hưng |
 | **MSSV** | 23020747 |
-| **Video demo** | _[Google Drive link]_ |
-| **Báo cáo PDF** | [`docs/report.pdf`](docs/report.pdf) |
+| **Video demo** | _[https://drive.google.com/drive/folders/1ASRbTIZGw83drlyjKtJnDf7LXKYZQVSq?usp=sharing]_ |
+
 
 ---
 
@@ -200,15 +200,8 @@ ros2 launch tb4_nav_yolo mission.launch.py   # sau khi sửa trong goals.yaml:
 | Treo ở `waiting for service /controller_manager` | Chạy `scripts/cleanup.sh` rồi launch lại Gazebo |
 | Không có cửa sổ OpenCV | Xem trên RViz2 qua topic `/yolo/image_annotated` |
 
-## 6. Kết quả
 
-| Bản đồ + các goal | Robot lập đường đi | Nhận diện YOLO |
-|---|---|---|
-| ![goals](docs/images/goals.png) | ![path](docs/images/path.png) | ![yolo](docs/images/yolo.png) |
-
-Video demo: _[Google Drive link]_
-
-## 7. Tài liệu tham khảo
+## 6. Tài liệu tham khảo
 
 - TurtleBot 4 Navigator: <https://turtlebot.github.io/turtlebot4-user-manual/tutorials/turtlebot4_navigator.html>
 - Nav2 Simple Commander API: <https://docs.nav2.org/commander_api/index.html>

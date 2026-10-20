@@ -1,0 +1,30 @@
+# Tham số cho 2 node của package tb4_nav_yolo.
+#
+# !!! THAY TOẠ ĐỘ GOAL BẰNG TOẠ ĐỘ LẤY TỪ BẢN ĐỒ CỦA BẠN (xem README, Phần 2) !!!
+# Mỗi goal gồm 3 số: x (m), y (m), yaw (độ) trong frame "map".
+
+waypoint_navigator:
+  ros__parameters:
+    goals: [
+      2.0,  0.0,   0.0,     # Goal 1
+      2.0, -3.0, -90.0,     # Goal 2
+     -1.0, -3.0, 180.0,     # Goal 3
+    ]
+    undock_first: true          # tự undock trước khi chạy
+    set_initial_pose: true      # tự đặt initial pose (robot đang nằm trên dock = gốc map)
+    initial_pose: [0.0, 0.0, 0.0]
+    wait_at_goal_sec: 3.0       # dừng tại mỗi goal để YOLO quan sát
+    goal_timeout_sec: 180.0
+    loop: false
+
+yolo_detector:
+  ros__parameters:
+    image_topic: /oakd/rgb/preview/image_raw
+    model: yolov8n.pt           # hoặc yolo11n.pt, yolov8s-world.pt
+    classes: ""                 # chỉ cho YOLO-World, vd: "person, chair, box, shelf, fire extinguisher"
+    conf: 0.4
+    rate_hz: 5.0
+    imgsz: 640
+    device: ""                  # "" = tự chọn, "cpu", "0" = GPU
+    show_window: true
+    log_period: 1.0
